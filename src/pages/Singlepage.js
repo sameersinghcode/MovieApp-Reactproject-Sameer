@@ -1,4 +1,5 @@
 import { useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
 
 // Context
 import ShowsContext from "../context/shows/showsContext";
@@ -68,6 +69,12 @@ const Singlepage = ({ match }) => {
               )}
             </p>
             <p>{singleShow.summary && removeTags(singleShow.summary)}</p>
+            <Link to={{
+              pathname: "/booktickets",
+              state: { singleShow }
+              }}>
+              <button className="book-ticket-button">Book Ticket</button>
+              </Link>
           </div>
         </div>
       )}

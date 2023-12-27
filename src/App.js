@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import HomePage from "./pages/Homepage";
 import AboutPage from "./pages/Aboutpage";
 import SinglePage from "./pages/Singlepage";
+import BookTickets from './pages/booktickets.js';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/about" component={AboutPage} />
           <Route path="/singleshow/:id" component={SinglePage} />
+          <Route path="/booktickets" component={BookTickets} />
         </Switch>
       </div>
     </Router>
